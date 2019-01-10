@@ -1,0 +1,6 @@
+# Default code reviewers picked from top 3 or more developers.
+# Please update this list if you find better candidates.
+# aardappel@gmail.com
+wvo@google.com # upstream maintainer
+smiles@google.com # upstream maintainer
+chh@google.com
