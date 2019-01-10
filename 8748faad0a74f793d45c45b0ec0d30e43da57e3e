@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c535d3d6_6395f98f",
+        "filename": "OWNERS",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1060910
+      },
+      "writtenOn": "2019-01-10T23:51:49Z",
+      "side": 1,
+      "message": "I am the upstream maintainer, but owner here should be someone from the Android org, as I am not otherwise involved in AOSP. The only \"review\" necessary here is for mirroring upstream, right?\nSame probably holds for smiles@",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 14
+      },
+      "revId": "8748faad0a74f793d45c45b0ec0d30e43da57e3e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
