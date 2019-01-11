@@ -22,6 +22,30 @@
       "revId": "8748faad0a74f793d45c45b0ec0d30e43da57e3e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a09f2e85_e857aadd",
+        "filename": "OWNERS",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1052399
+      },
+      "writtenOn": "2019-01-11T18:33:19Z",
+      "side": 1,
+      "message": "Okay, I will add myself to the list and handle most change requests to AOSP, and forward to you other non-trivial changes.",
+      "parentUuid": "c535d3d6_6395f98f",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 14
+      },
+      "revId": "8748faad0a74f793d45c45b0ec0d30e43da57e3e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
