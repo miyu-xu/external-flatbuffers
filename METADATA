@@ -9,10 +9,10 @@ third_party {
     type: GIT
     value: "https://github.com/google/flatbuffers.git"
   }
-  version: "63d51afd1196336a7d1f56a988091ef05deb1c62"
+  version: "d8210d5a83faa345046648e520d82b54ea724e35"
   last_upgrade_date {
     year: 2019
-    month: 1
-    day: 28
+    month: 2
+    day: 1
   }
 }
