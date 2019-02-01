@@ -255,6 +255,24 @@ void AccessFlatBufferTest(const uint8_t *flatbuf, size_t length,
     TEST_EQ(*it, inv_data[indx]);
   }
 
+  for (auto it = inventory->cbegin(); it != inventory->cend(); ++it) {
+    auto indx = it - inventory->cbegin();
+    TEST_EQ(*it, inv_vec.at(indx));  // Use bounds-check.
+    TEST_EQ(*it, inv_data[indx]);
+  }
+
+  for (auto it = inventory->rbegin(); it != inventory->rend(); ++it) {
+    auto indx = inventory->rend() - it;
+    TEST_EQ(*it, inv_vec.at(indx));  // Use bounds-check.
+    TEST_EQ(*it, inv_data[indx]);
+  }
+
+  for (auto it = inventory->crbegin(); it != inventory->crend(); ++it) {
+    auto indx = inventory->crend() - it;
+    TEST_EQ(*it, inv_vec.at(indx));  // Use bounds-check.
+    TEST_EQ(*it, inv_data[indx]);
+  }
+
   TEST_EQ(monster->color(), Color_Blue);
 
   // Example of accessing a union:
@@ -265,7 +283,7 @@ void AccessFlatBufferTest(const uint8_t *flatbuf, size_t length,
 
   // Example of accessing a vector of strings:
   auto vecofstrings = monster->testarrayofstring();
-  TEST_EQ(vecofstrings->Length(), 4U);
+  TEST_EQ(vecofstrings->size(), 4U);
   TEST_EQ_STR(vecofstrings->Get(0)->c_str(), "bob");
   TEST_EQ_STR(vecofstrings->Get(1)->c_str(), "fred");
   if (pooled) {
@@ -276,14 +294,14 @@ void AccessFlatBufferTest(const uint8_t *flatbuf, size_t length,
 
   auto vecofstrings2 = monster->testarrayofstring2();
   if (vecofstrings2) {
-    TEST_EQ(vecofstrings2->Length(), 2U);
+    TEST_EQ(vecofstrings2->size(), 2U);
     TEST_EQ_STR(vecofstrings2->Get(0)->c_str(), "jane");
     TEST_EQ_STR(vecofstrings2->Get(1)->c_str(), "mary");
   }
 
   // Example of accessing a vector of tables:
   auto vecoftables = monster->testarrayoftables();
-  TEST_EQ(vecoftables->Length(), 3U);
+  TEST_EQ(vecoftables->size(), 3U);
   for (auto it = vecoftables->begin(); it != vecoftables->end(); ++it)
     TEST_EQ(strlen(it->name()->c_str()) >= 4, true);
   TEST_EQ_STR(vecoftables->Get(0)->name()->c_str(), "Barney");
@@ -2445,13 +2463,6 @@ void CreateSharedStringTest() {
 
 int FlatBufferTests() {
   // clang-format off
-  #if defined(FLATBUFFERS_MEMORY_LEAK_TRACKING) && \
-      defined(_MSC_VER) && defined(_DEBUG)
-    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF
-      // For more thorough checking:
-      //| _CRTDBG_CHECK_ALWAYS_DF | _CRTDBG_DELAY_FREE_MEM_DF
-    );
-  #endif
 
   // Run our various test suites:
 
@@ -2545,9 +2556,8 @@ int main(int /*argc*/, const char * /*argv*/ []) {
 
   if (!testing_fails) {
     TEST_OUTPUT_LINE("ALL TESTS PASSED");
-    return 0;
   } else {
     TEST_OUTPUT_LINE("%d FAILED TESTS", testing_fails);
-    return 1;
   }
+  return CloseTestEngine();
 }
