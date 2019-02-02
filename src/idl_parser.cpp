@@ -94,7 +94,7 @@ std::string MakeCamel(const std::string &in, bool first) {
 void DeserializeDoc( std::vector<std::string> &doc,
                      const Vector<Offset<String>> *documentation) {
   if (documentation == nullptr) return;
-  for (uoffset_t index = 0; index < documentation->Length(); index++)
+  for (uoffset_t index = 0; index < documentation->size(); index++)
     doc.push_back(documentation->Get(index)->str());
 }
 
@@ -411,10 +411,8 @@ CheckedError Parser::Next() {
           }
           cursor_ += 2;
           break;
-        } else {
-          // fall thru
         }
-        FLATBUFFERS_ATTRIBUTE(fallthrough);
+        FLATBUFFERS_FALLTHROUGH(); // else fall thru
       default:
         const auto has_sign = (c == '+') || (c == '-');
         // '-'/'+' and following identifier - can be a predefined constant like:
@@ -2755,8 +2753,8 @@ bool StructDef::Deserialize(Parser &parser, const reflection::Object *object) {
   predecl = false;
   sortbysize = attributes.Lookup("original_order") == nullptr && !fixed;
   std::vector<uoffset_t> indexes =
-    std::vector<uoffset_t>(object->fields()->Length());
-  for (uoffset_t i = 0; i < object->fields()->Length(); i++)
+    std::vector<uoffset_t>(object->fields()->size());
+  for (uoffset_t i = 0; i < object->fields()->size(); i++)
     indexes[object->fields()->Get(i)->id()] = i;
   for (size_t i = 0; i < indexes.size(); i++) {
     auto field = object->fields()->Get(indexes[i]);
