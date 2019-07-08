@@ -25,20 +25,42 @@ MyGame.Example2 = MyGame.Example2 || {};
 MyGame.OtherNameSpace = MyGame.OtherNameSpace || {};
 
 /**
+ * Composite components of Monster color.
+ *
  * @enum {number}
  */
 MyGame.Example.Color = {
   Red: 1,
+
+  /**
+   * \brief color Green
+   * Green is bit_flag with value (1u << 1)
+   */
   Green: 2,
+
+  /**
+   * \brief color Blue (1u << 3)
+   */
   Blue: 8
 };
 
 /**
+ * Composite components of Monster color.
+ *
  * @enum {string}
  */
 MyGame.Example.ColorName = {
   1: 'Red',
+
+  /**
+   * \brief color Green
+   * Green is bit_flag with value (1u << 1)
+   */
   2: 'Green',
+
+  /**
+   * \brief color Blue (1u << 3)
+   */
   8: 'Blue'
 };
 
@@ -68,7 +90,7 @@ MyGame.Example.AnyName = {
 MyGame.Example.AnyUniqueAliases = {
   NONE: 0,
   M: 1,
-  T: 2,
+  TS: 2,
   M2: 3
 };
 
@@ -78,7 +100,7 @@ MyGame.Example.AnyUniqueAliases = {
 MyGame.Example.AnyUniqueAliasesName = {
   0: 'NONE',
   1: 'M',
-  2: 'T',
+  2: 'TS',
   3: 'M2'
 };
 
@@ -134,6 +156,15 @@ MyGame.InParentNamespace.prototype.__init = function(i, bb) {
  * @returns {MyGame.InParentNamespace}
  */
 MyGame.InParentNamespace.getRootAsInParentNamespace = function(bb, obj) {
+  return (obj || new MyGame.InParentNamespace).__init(bb.readInt32(bb.position()) + bb.position(), bb);
+};
+
+/**
+ * @param {flatbuffers.ByteBuffer} bb
+ * @param {MyGame.InParentNamespace=} obj
+ * @returns {MyGame.InParentNamespace}
+ */
+MyGame.InParentNamespace.getSizePrefixedRootAsInParentNamespace = function(bb, obj) {
   return (obj || new MyGame.InParentNamespace).__init(bb.readInt32(bb.position()) + bb.position(), bb);
 };
 
@@ -194,6 +225,15 @@ MyGame.Example2.Monster.prototype.__init = function(i, bb) {
  * @returns {MyGame.Example2.Monster}
  */
 MyGame.Example2.Monster.getRootAsMonster = function(bb, obj) {
+  return (obj || new MyGame.Example2.Monster).__init(bb.readInt32(bb.position()) + bb.position(), bb);
+};
+
+/**
+ * @param {flatbuffers.ByteBuffer} bb
+ * @param {MyGame.Example2.Monster=} obj
+ * @returns {MyGame.Example2.Monster}
+ */
+MyGame.Example2.Monster.getSizePrefixedRootAsMonster = function(bb, obj) {
   return (obj || new MyGame.Example2.Monster).__init(bb.readInt32(bb.position()) + bb.position(), bb);
 };
 
@@ -342,11 +382,20 @@ MyGame.Example.TestSimpleTableWithEnum.getRootAsTestSimpleTableWithEnum = functi
 };
 
 /**
+ * @param {flatbuffers.ByteBuffer} bb
+ * @param {MyGame.Example.TestSimpleTableWithEnum=} obj
+ * @returns {MyGame.Example.TestSimpleTableWithEnum}
+ */
+MyGame.Example.TestSimpleTableWithEnum.getSizePrefixedRootAsTestSimpleTableWithEnum = function(bb, obj) {
+  return (obj || new MyGame.Example.TestSimpleTableWithEnum).__init(bb.readInt32(bb.position()) + bb.position(), bb);
+};
+
+/**
  * @returns {MyGame.Example.Color}
  */
 MyGame.Example.TestSimpleTableWithEnum.prototype.color = function() {
   var offset = this.bb.__offset(this.bb_pos, 4);
-  return offset ? /** @type {MyGame.Example.Color} */ (this.bb.readInt8(this.bb_pos + offset)) : MyGame.Example.Color.Green;
+  return offset ? /** @type {MyGame.Example.Color} */ (this.bb.readUint8(this.bb_pos + offset)) : MyGame.Example.Color.Green;
 };
 
 /**
@@ -360,7 +409,7 @@ MyGame.Example.TestSimpleTableWithEnum.prototype.mutate_color = function(value) 
     return false;
   }
 
-  this.bb.writeInt8(this.bb_pos + offset, value);
+  this.bb.writeUint8(this.bb_pos + offset, value);
   return true;
 };
 
@@ -517,7 +566,7 @@ MyGame.Example.Vec3.prototype.mutate_test1 = function(value) {
  * @returns {MyGame.Example.Color}
  */
 MyGame.Example.Vec3.prototype.test2 = function() {
-  return /** @type {MyGame.Example.Color} */ (this.bb.readInt8(this.bb_pos + 24));
+  return /** @type {MyGame.Example.Color} */ (this.bb.readUint8(this.bb_pos + 24));
 };
 
 /**
@@ -531,7 +580,7 @@ MyGame.Example.Vec3.prototype.mutate_test2 = function(value) {
     return false;
   }
 
-  this.bb.writeInt8(this.bb_pos + offset, value);
+  this.bb.writeUint8(this.bb_pos + offset, value);
   return true;
 };
 
@@ -690,6 +739,15 @@ MyGame.Example.Stat.getRootAsStat = function(bb, obj) {
 };
 
 /**
+ * @param {flatbuffers.ByteBuffer} bb
+ * @param {MyGame.Example.Stat=} obj
+ * @returns {MyGame.Example.Stat}
+ */
+MyGame.Example.Stat.getSizePrefixedRootAsStat = function(bb, obj) {
+  return (obj || new MyGame.Example.Stat).__init(bb.readInt32(bb.position()) + bb.position(), bb);
+};
+
+/**
  * @param {flatbuffers.Encoding=} optionalEncoding
  * @returns {string|Uint8Array|null}
  */
@@ -835,6 +893,15 @@ MyGame.Example.Referrable.getRootAsReferrable = function(bb, obj) {
 };
 
 /**
+ * @param {flatbuffers.ByteBuffer} bb
+ * @param {MyGame.Example.Referrable=} obj
+ * @returns {MyGame.Example.Referrable}
+ */
+MyGame.Example.Referrable.getSizePrefixedRootAsReferrable = function(bb, obj) {
+  return (obj || new MyGame.Example.Referrable).__init(bb.readInt32(bb.position()) + bb.position(), bb);
+};
+
+/**
  * @returns {flatbuffers.Long}
  */
 MyGame.Example.Referrable.prototype.id = function() {
@@ -926,6 +993,15 @@ MyGame.Example.Monster.prototype.__init = function(i, bb) {
  * @returns {MyGame.Example.Monster}
  */
 MyGame.Example.Monster.getRootAsMonster = function(bb, obj) {
+  return (obj || new MyGame.Example.Monster).__init(bb.readInt32(bb.position()) + bb.position(), bb);
+};
+
+/**
+ * @param {flatbuffers.ByteBuffer} bb
+ * @param {MyGame.Example.Monster=} obj
+ * @returns {MyGame.Example.Monster}
+ */
+MyGame.Example.Monster.getSizePrefixedRootAsMonster = function(bb, obj) {
   return (obj || new MyGame.Example.Monster).__init(bb.readInt32(bb.position()) + bb.position(), bb);
 };
 
@@ -1031,7 +1107,7 @@ MyGame.Example.Monster.prototype.inventoryArray = function() {
  */
 MyGame.Example.Monster.prototype.color = function() {
   var offset = this.bb.__offset(this.bb_pos, 16);
-  return offset ? /** @type {MyGame.Example.Color} */ (this.bb.readInt8(this.bb_pos + offset)) : MyGame.Example.Color.Blue;
+  return offset ? /** @type {MyGame.Example.Color} */ (this.bb.readUint8(this.bb_pos + offset)) : MyGame.Example.Color.Blue;
 };
 
 /**
@@ -1045,7 +1121,7 @@ MyGame.Example.Monster.prototype.mutate_color = function(value) {
     return false;
   }
 
-  this.bb.writeInt8(this.bb_pos + offset, value);
+  this.bb.writeUint8(this.bb_pos + offset, value);
   return true;
 };
 
@@ -1838,7 +1914,7 @@ MyGame.Example.Monster.prototype.anyAmbiguous = function(obj) {
  */
 MyGame.Example.Monster.prototype.vectorOfEnums = function(index) {
   var offset = this.bb.__offset(this.bb_pos, 98);
-  return offset ? /** @type {MyGame.Example.Color} */ (this.bb.readInt8(this.bb.__vector(this.bb_pos + offset) + index)) : /** @type {MyGame.Example.Color} */ (0);
+  return offset ? /** @type {MyGame.Example.Color} */ (this.bb.readUint8(this.bb.__vector(this.bb_pos + offset) + index)) : /** @type {MyGame.Example.Color} */ (0);
 };
 
 /**
@@ -1850,11 +1926,11 @@ MyGame.Example.Monster.prototype.vectorOfEnumsLength = function() {
 };
 
 /**
- * @returns {Int8Array}
+ * @returns {Uint8Array}
  */
 MyGame.Example.Monster.prototype.vectorOfEnumsArray = function() {
   var offset = this.bb.__offset(this.bb_pos, 98);
-  return offset ? new Int8Array(this.bb.bytes().buffer, this.bb.bytes().byteOffset + this.bb.__vector(this.bb_pos + offset), this.bb.__vector_len(this.bb_pos + offset)) : null;
+  return offset ? new Uint8Array(this.bb.bytes().buffer, this.bb.bytes().byteOffset + this.bb.__vector(this.bb_pos + offset), this.bb.__vector_len(this.bb_pos + offset)) : null;
 };
 
 /**
@@ -2599,6 +2675,14 @@ MyGame.Example.Monster.finishMonsterBuffer = function(builder, offset) {
 
 /**
  * @param {flatbuffers.Builder} builder
+ * @param {flatbuffers.Offset} offset
+ */
+MyGame.Example.Monster.finishSizePrefixedMonsterBuffer = function(builder, offset) {
+  builder.finish(offset, 'MONS', true);
+};
+
+/**
+ * @param {flatbuffers.Builder} builder
  * @param {flatbuffers.Offset} posOffset
  * @param {number} mana
  * @param {number} hp
@@ -2732,6 +2816,15 @@ MyGame.Example.TypeAliases.prototype.__init = function(i, bb) {
  * @returns {MyGame.Example.TypeAliases}
  */
 MyGame.Example.TypeAliases.getRootAsTypeAliases = function(bb, obj) {
+  return (obj || new MyGame.Example.TypeAliases).__init(bb.readInt32(bb.position()) + bb.position(), bb);
+};
+
+/**
+ * @param {flatbuffers.ByteBuffer} bb
+ * @param {MyGame.Example.TypeAliases=} obj
+ * @returns {MyGame.Example.TypeAliases}
+ */
+MyGame.Example.TypeAliases.getSizePrefixedRootAsTypeAliases = function(bb, obj) {
   return (obj || new MyGame.Example.TypeAliases).__init(bb.readInt32(bb.position()) + bb.position(), bb);
 };
 

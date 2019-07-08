@@ -163,18 +163,22 @@ pub mod example {
   extern crate flatbuffers;
   use self::flatbuffers::EndianScalar;
 
+/// Composite components of Monster color.
 #[allow(non_camel_case_types)]
-#[repr(i8)]
+#[repr(u8)]
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Debug)]
 pub enum Color {
   Red = 1,
+  /// \brief color Green
+  /// Green is bit_flag with value (1u << 1)
   Green = 2,
+  /// \brief color Blue (1u << 3)
   Blue = 8,
 
 }
 
-const ENUM_MIN_COLOR: i8 = 1;
-const ENUM_MAX_COLOR: i8 = 8;
+const ENUM_MIN_COLOR: u8 = 1;
+const ENUM_MAX_COLOR: u8 = 8;
 
 impl<'a> flatbuffers::Follow<'a> for Color {
   type Inner = Self;
@@ -187,14 +191,14 @@ impl<'a> flatbuffers::Follow<'a> for Color {
 impl flatbuffers::EndianScalar for Color {
   #[inline]
   fn to_little_endian(self) -> Self {
-    let n = i8::to_le(self as i8);
-    let p = &n as *const i8 as *const Color;
+    let n = u8::to_le(self as u8);
+    let p = &n as *const u8 as *const Color;
     unsafe { *p }
   }
   #[inline]
   fn from_little_endian(self) -> Self {
-    let n = i8::from_le(self as i8);
-    let p = &n as *const i8 as *const Color;
+    let n = u8::from_le(self as u8);
+    let p = &n as *const u8 as *const Color;
     unsafe { *p }
   }
 }
@@ -227,8 +231,8 @@ const ENUM_NAMES_COLOR:[&'static str; 8] = [
 ];
 
 pub fn enum_name_color(e: Color) -> &'static str {
-  let index: usize = e as usize - Color::Red as usize;
-  ENUM_NAMES_COLOR[index]
+  let index = e as u8 - Color::Red as u8;
+  ENUM_NAMES_COLOR[index as usize]
 }
 
 #[allow(non_camel_case_types)]
@@ -293,8 +297,8 @@ const ENUM_NAMES_ANY:[&'static str; 4] = [
 ];
 
 pub fn enum_name_any(e: Any) -> &'static str {
-  let index: usize = e as usize;
-  ENUM_NAMES_ANY[index]
+  let index = e as u8;
+  ENUM_NAMES_ANY[index as usize]
 }
 
 pub struct AnyUnionTableOffset {}
@@ -304,7 +308,7 @@ pub struct AnyUnionTableOffset {}
 pub enum AnyUniqueAliases {
   NONE = 0,
   M = 1,
-  T = 2,
+  TS = 2,
   M2 = 3,
 
 }
@@ -347,7 +351,7 @@ impl flatbuffers::Push for AnyUniqueAliases {
 const ENUM_VALUES_ANY_UNIQUE_ALIASES:[AnyUniqueAliases; 4] = [
   AnyUniqueAliases::NONE,
   AnyUniqueAliases::M,
-  AnyUniqueAliases::T,
+  AnyUniqueAliases::TS,
   AnyUniqueAliases::M2
 ];
 
@@ -355,13 +359,13 @@ const ENUM_VALUES_ANY_UNIQUE_ALIASES:[AnyUniqueAliases; 4] = [
 const ENUM_NAMES_ANY_UNIQUE_ALIASES:[&'static str; 4] = [
     "NONE",
     "M",
-    "T",
+    "TS",
     "M2"
 ];
 
 pub fn enum_name_any_unique_aliases(e: AnyUniqueAliases) -> &'static str {
-  let index: usize = e as usize;
-  ENUM_NAMES_ANY_UNIQUE_ALIASES[index]
+  let index = e as u8;
+  ENUM_NAMES_ANY_UNIQUE_ALIASES[index as usize]
 }
 
 pub struct AnyUniqueAliasesUnionTableOffset {}
@@ -427,8 +431,8 @@ const ENUM_NAMES_ANY_AMBIGUOUS_ALIASES:[&'static str; 4] = [
 ];
 
 pub fn enum_name_any_ambiguous_aliases(e: AnyAmbiguousAliases) -> &'static str {
-  let index: usize = e as usize;
-  ENUM_NAMES_ANY_AMBIGUOUS_ALIASES[index]
+  let index = e as u8;
+  ENUM_NAMES_ANY_AMBIGUOUS_ALIASES[index as usize]
 }
 
 pub struct AnyAmbiguousAliasesUnionTableOffset {}
@@ -1294,8 +1298,8 @@ impl<'a> Monster<'a> {
 
   #[inline]
   #[allow(non_snake_case)]
-  pub fn any_unique_as_t(&self) -> Option<TestSimpleTableWithEnum<'a>> {
-    if self.any_unique_type() == AnyUniqueAliases::T {
+  pub fn any_unique_as_ts(&self) -> Option<TestSimpleTableWithEnum<'a>> {
+    if self.any_unique_type() == AnyUniqueAliases::TS {
       self.any_unique().map(|u| TestSimpleTableWithEnum::init_from_table(u))
     } else {
       None

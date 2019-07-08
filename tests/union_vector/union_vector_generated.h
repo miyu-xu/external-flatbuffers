@@ -59,7 +59,7 @@ inline const Character (&EnumValuesCharacter())[7] {
 }
 
 inline const char * const *EnumNamesCharacter() {
-  static const char * const names[] = {
+  static const char * const names[8] = {
     "NONE",
     "MuLan",
     "Rapunzel",
@@ -197,6 +197,9 @@ FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(4) Rapunzel FLATBUFFERS_FINAL_CLASS {
   int32_t hair_length_;
 
  public:
+  static const flatbuffers::TypeTable *MiniReflectTypeTable() {
+    return RapunzelTypeTable();
+  }
   Rapunzel() {
     memset(static_cast<void *>(this), 0, sizeof(Rapunzel));
   }
@@ -227,6 +230,9 @@ FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(4) BookReader FLATBUFFERS_FINAL_CLASS {
   int32_t books_read_;
 
  public:
+  static const flatbuffers::TypeTable *MiniReflectTypeTable() {
+    return BookReaderTypeTable();
+  }
   BookReader() {
     memset(static_cast<void *>(this), 0, sizeof(BookReader));
   }
@@ -541,13 +547,13 @@ inline bool VerifyCharacter(flatbuffers::Verifier &verifier, const void *obj, Ch
       return verifier.VerifyTable(ptr);
     }
     case Character_Rapunzel: {
-      return true;
+      return verifier.Verify<Rapunzel>(static_cast<const uint8_t *>(obj), 0);
     }
     case Character_Belle: {
-      return true;
+      return verifier.Verify<BookReader>(static_cast<const uint8_t *>(obj), 0);
     }
     case Character_BookFan: {
-      return true;
+      return verifier.Verify<BookReader>(static_cast<const uint8_t *>(obj), 0);
     }
     case Character_Other: {
       auto ptr = reinterpret_cast<const flatbuffers::String *>(obj);
@@ -842,6 +848,12 @@ inline flatbuffers::unique_ptr<MovieT> UnPackMovie(
     const void *buf,
     const flatbuffers::resolver_function_t *res = nullptr) {
   return flatbuffers::unique_ptr<MovieT>(GetMovie(buf)->UnPack(res));
+}
+
+inline flatbuffers::unique_ptr<MovieT> UnPackSizePrefixedMovie(
+    const void *buf,
+    const flatbuffers::resolver_function_t *res = nullptr) {
+  return flatbuffers::unique_ptr<MovieT>(GetSizePrefixedMovie(buf)->UnPack(res));
 }
 
 #endif  // FLATBUFFERS_GENERATED_UNIONVECTOR_H_
