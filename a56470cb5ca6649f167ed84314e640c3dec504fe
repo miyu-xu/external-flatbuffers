@@ -1,0 +1,10 @@
+Lint+1: Lint 🤖 <android-build-prod-ayeaye@system.gserviceaccount.com>
+Code-Review+2: Miao Wang <miaowang@google.com>
+Code-Review+2: Przemyslaw Szczepaniak <pszczepaniak@google.com>
+Code-Review+1: Colin Cross <ccross@android.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Lev Proleev <levp@google.com>
+Submitted-at: Sun, 16 Feb 2020 11:17:19 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/external/flatbuffers/+/1231191
+Project: platform/external/flatbuffers
+Branch: refs/heads/master
