@@ -1,0 +1,10 @@
+Autosubmit+1: Haibo Huang <hhb@google.com>
+Lint-1: Lint 🤖 <android-build-prod-ayeaye@system.gserviceaccount.com>
+Lint+2: Haibo Huang <hhb@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Code-Review+2: Elliott Hughes <enh@google.com>
+Submitted-by: Haibo Huang <hhb@google.com>
+Submitted-at: Thu, 26 Mar 2020 05:07:42 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/external/flatbuffers/+/1260581
+Project: platform/external/flatbuffers
+Branch: refs/heads/master
