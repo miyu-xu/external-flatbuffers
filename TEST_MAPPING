@@ -1,0 +1,7 @@
+{
+  "presubmit": [
+    {
+      "name": "bluetooth_flatbuffer_tests"
+    }
+  ]
+}
