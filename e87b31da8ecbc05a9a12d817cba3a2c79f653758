@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0b3acbce_2e603db8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1041767
+      },
+      "writtenOn": "2020-07-13T21:50:48Z",
+      "side": 1,
+      "message": "Hi Elliot,\n\nNow that we are generating and processing flatbuffer data, this second pass cleans up memory footprint issues with our stack.\n\nthx,\n\nChris\n--\n",
+      "revId": "e87b31da8ecbc05a9a12d817cba3a2c79f653758",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
