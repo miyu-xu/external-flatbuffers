@@ -1,0 +1,9 @@
+Code-Review+2: Elliott Hughes <enh@google.com>
+Lint+1: Lint 🤖 <ayeaye-gerrit@google.com>
+Autosubmit+1: Branden Archer <brarcher@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Mon, 02 Nov 2020 23:32:31 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/external/flatbuffers/+/1483339
+Project: platform/external/flatbuffers
+Branch: refs/heads/master
