@@ -70,6 +70,24 @@
       "parentUuid": "7b1e7904_8940bc8b",
       "revId": "cdded6c736dbedf2e38d0c5d959765be887830bc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f425ce44_8c608941",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2021-02-01T19:06:33Z",
+      "side": 1,
+      "message": "yeah, \"if in doubt, leave it out\" :-)\n\n(especially because mac builds are so infrequent, and most people don\u0027t have a mac to be able to fix a mac build issue.)",
+      "parentUuid": "0bfd4162_d8ab4e4e",
+      "revId": "cdded6c736dbedf2e38d0c5d959765be887830bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
