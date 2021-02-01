@@ -34,6 +34,24 @@
       "parentUuid": "3dd2ab7b_61cead48",
       "revId": "cdded6c736dbedf2e38d0c5d959765be887830bc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7b1e7904_8940bc8b",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1057232
+      },
+      "writtenOn": "2021-02-01T17:40:14Z",
+      "side": 1,
+      "message": "honestly, I don\u0027t have a preference here. But I think it makes sense to disable it if you don\u0027t need to build on darwin.",
+      "parentUuid": "7a01f39b_1aace5ee",
+      "revId": "cdded6c736dbedf2e38d0c5d959765be887830bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
