@@ -16,6 +16,24 @@
       "message": "note that this includes darwin by default. did you meant to disable darwin to avoid that maintenance cost?",
       "revId": "cdded6c736dbedf2e38d0c5d959765be887830bc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7a01f39b_1aace5ee",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1841995
+      },
+      "writtenOn": "2021-02-01T17:29:00Z",
+      "side": 1,
+      "message": "@miaowang should I disable darwin?",
+      "parentUuid": "3dd2ab7b_61cead48",
+      "revId": "cdded6c736dbedf2e38d0c5d959765be887830bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
