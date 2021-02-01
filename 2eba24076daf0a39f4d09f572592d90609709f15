@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d910082f_6a399ad6",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1057232
+      },
+      "writtenOn": "2021-02-01T18:33:56Z",
+      "side": 1,
+      "message": "do you want to also disable darwin here?",
+      "range": {
+        "startLine": 74,
+        "startChar": 4,
+        "endLine": 74,
+        "endChar": 20
+      },
+      "revId": "2eba24076daf0a39f4d09f572592d90609709f15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
