@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc1fa18d_e8749cb7",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1841995
+      },
+      "writtenOn": "2021-02-02T06:30:54Z",
+      "side": 0,
+      "message": "I think only reverting the dawin disable part is enought. Reverting this host_supported without the other cls submitted together will just break the build on even linux.",
+      "revId": "a7ab966eb0e877c11d2777aad1d1758c7c41778a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "321e5299_c417898c",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1841995
+      },
+      "writtenOn": "2021-02-02T06:30:54Z",
+      "side": 0,
+      "message": "I think only reverting the dawin disable part is enought. Reverting this vendor_available without the other cls submitted together will just break the build on even linux.",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 27
+      },
+      "revId": "a7ab966eb0e877c11d2777aad1d1758c7c41778a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
