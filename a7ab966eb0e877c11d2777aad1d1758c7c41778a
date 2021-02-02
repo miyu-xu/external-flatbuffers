@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fe1da514_7efc04b5",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1388184
+      },
+      "writtenOn": "2021-02-02T06:34:02Z",
+      "side": 0,
+      "message": "Could you please make the change? Thanks.",
+      "parentUuid": "cc1fa18d_e8749cb7",
+      "revId": "a7ab966eb0e877c11d2777aad1d1758c7c41778a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "321e5299_c417898c",
         "filename": "Android.bp",
         "patchSetId": 1
