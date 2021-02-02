@@ -16,6 +16,24 @@
       "message": "Is the Topic still needed?",
       "revId": "1923810df0703a1aa62e9df5eb8d7a77b0707368",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "63a5432f_4d63df48",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1841995
+      },
+      "writtenOn": "2021-02-02T06:52:06Z",
+      "side": 1,
+      "message": "No. Just add it to distinguish from the other thread.",
+      "parentUuid": "f04af075_2877a2cd",
+      "revId": "1923810df0703a1aa62e9df5eb8d7a77b0707368",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
