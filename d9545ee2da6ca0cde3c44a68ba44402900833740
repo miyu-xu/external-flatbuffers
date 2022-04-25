@@ -52,6 +52,24 @@
       "parentUuid": "0dfbfa29_de85fca2",
       "revId": "d9545ee2da6ca0cde3c44a68ba44402900833740",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c973db2_29067ada",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1576895
+      },
+      "writtenOn": "2022-04-25T17:30:13Z",
+      "side": 1,
+      "message": "The reason I need to check in this build script into the Android tree is because the code in Android tree is the source of truth of our project for now. Our project is not only built with Soong and gn but also with CMake and meson for different platforms. The meson build system is used for building goldfish-opengl(the guest graphics drivers) for Linux, while we do use Soong for Android, and use gn for Fuchsia. CMake is used to build the host renderer for all platforms(MacOS, Windows, and Linux). Therefore, we have already checked in various build scripts into the Android tree already:\n* https://android.googlesource.com/device/generic/goldfish-opengl/+/refs/heads/master/BUILD.gn\n* https://android.googlesource.com/device/generic/goldfish-opengl/+/refs/heads/master/meson.build\n* https://android.googlesource.com/device/generic/vulkan-cereal/+/refs/heads/master/CMakeLists.txt\n\nHaving said so, I completely understand that we don\u0027t want to check in extra build scripts into other seemingly unrelated projects, so if checking in this change to external/flatbuffers is indeed not wanted, I could do the following alternatives:\n* Create a symbol link to external/flatbuffers in the goldfish-opengl project, where we need to use the meson build system, e.g. submodules/flatbuffers-aosp/flatbuffers. Then create a meson build script, in the parent directory, i.e. submodules/flatbuffers-aosp, or;\n* Check in all the source of flatbuffers into the gfxstream-protocols repo, and use that as the single source of truth for all our projects. This approach has a clear disadvantage that we have to manually update the flatbuffers repo and the Android.bp file, so I would still prefer the first approach.\n\nWDYT?",
+      "parentUuid": "2165021d_35eccf73",
+      "revId": "d9545ee2da6ca0cde3c44a68ba44402900833740",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
