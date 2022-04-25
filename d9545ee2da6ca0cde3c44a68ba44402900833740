@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "38dfa667_7dfe2af2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-04-25T16:26:54Z",
+      "side": 1,
+      "message": "what is the project, and why aren\u0027t they using a supported build system? bug? design doc? how many other external projects do you need to use? where does _your_ code live?",
+      "revId": "d9545ee2da6ca0cde3c44a68ba44402900833740",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
