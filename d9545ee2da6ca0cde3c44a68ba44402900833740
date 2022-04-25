@@ -34,6 +34,24 @@
       "parentUuid": "38dfa667_7dfe2af2",
       "revId": "d9545ee2da6ca0cde3c44a68ba44402900833740",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2165021d_35eccf73",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-04-25T17:00:20Z",
+      "side": 1,
+      "message": "i don\u0027t see any part of that that explains why you need yet another build system? that\u0027s a pretty difficult idea to sell...\n\neven if upstream uses meson, *we* won\u0027t, so i don\u0027t think it makes sense in Android\u0027s tree (unless you submit it upstream to mesa first, and even then...).",
+      "parentUuid": "0dfbfa29_de85fca2",
+      "revId": "d9545ee2da6ca0cde3c44a68ba44402900833740",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
