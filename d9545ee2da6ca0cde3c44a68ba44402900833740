@@ -70,6 +70,24 @@
       "parentUuid": "2165021d_35eccf73",
       "revId": "d9545ee2da6ca0cde3c44a68ba44402900833740",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ec0f29d7_d7f5252e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-04-25T18:16:43Z",
+      "side": 1,
+      "message": "\u003e Check in all the source of flatbuffers into the gfxstream-protocols repo, and use that as the single source of truth for all our projects. This approach has a clear disadvantage that we have to manually update the flatbuffers repo and the Android.bp file, so I would still prefer the first approach.\n\ndon\u0027t the emulator folks (who, aiui, are your users) already work like that anyway?",
+      "parentUuid": "6c973db2_29067ada",
+      "revId": "d9545ee2da6ca0cde3c44a68ba44402900833740",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
