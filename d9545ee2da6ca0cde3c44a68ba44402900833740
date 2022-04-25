@@ -16,6 +16,24 @@
       "message": "what is the project, and why aren\u0027t they using a supported build system? bug? design doc? how many other external projects do you need to use? where does _your_ code live?",
       "revId": "d9545ee2da6ca0cde3c44a68ba44402900833740",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0dfbfa29_de85fca2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1576895
+      },
+      "writtenOn": "2022-04-25T16:56:46Z",
+      "side": 1,
+      "message": "\u003e what is the project, and why aren\u0027t they using a supported build system?\nA virtual GPU driver project that plans to eventually merge into mesa - and that\u0027s the precise reason why we can\u0027t use neither Android.bp nor CMake. The upstream mesa uses the meson build system.\n\n\u003e bug?\nhttp://b/192614792 and http://b/175527587\n\n\u003e design doc?\nhttp://doc/1Bp4igeC8Yxr8V-XFubhT1XKYTb0TIvOuQJuFdl59tVw\n\n\u003e how many other external projects do you need to use?\nCurrently, we have the following external projects in use:\n* gfxstream-protocols(https://android.googlesource.com/platform/external/gfxstream-protocols/)\n* Vulkan-headers(https://android.googlesource.com/platform/external/vulkan-headers/, plan to retire)\n* angle(https://android.googlesource.com/platform/external/angle/)\n* flatbuffers(this repo)\n* crosvm(https://android.googlesource.com/platform/external/crosvm/)\n\n\u003e where does _your_ code live?\nVarious places including:\n* external/qemu on the emu-master-dev branch\n* device/generic/goldfish-opengl\n* device/generic/vulkan-cereal\n\nI am wondering if you know any guidelines I should follow to make a change to an external project in aosp on the master branch. Thanks!",
+      "parentUuid": "38dfa667_7dfe2af2",
+      "revId": "d9545ee2da6ca0cde3c44a68ba44402900833740",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
