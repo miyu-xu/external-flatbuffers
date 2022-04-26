@@ -88,6 +88,24 @@
       "parentUuid": "6c973db2_29067ada",
       "revId": "d9545ee2da6ca0cde3c44a68ba44402900833740",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc65fa73_303b902b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1576895
+      },
+      "writtenOn": "2022-04-26T15:57:48Z",
+      "side": 1,
+      "message": "Will move flatbuffers to under the gfxstream-protocols repo, and abandon this change.",
+      "parentUuid": "ec0f29d7_d7f5252e",
+      "revId": "d9545ee2da6ca0cde3c44a68ba44402900833740",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
