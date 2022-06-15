@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c5321baa_5ffafb35",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-06-15T15:01:07Z",
+      "side": 1,
+      "message": "fixes to external/* projects should go upstream and be pulled back down.",
+      "revId": "c6251dd1c7aa062443094f478486e7d539e8feab",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
