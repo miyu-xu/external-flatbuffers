@@ -39,6 +39,11 @@ option(FLATBUFFERS_BUILD_LEGACY
        "Run C++ code generator with '--cpp-std c++0x' switch."
        OFF)
 
+set(MSVC_LIKE OFF)
+if(MSVC OR CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL "MSVC")
+    set(MSVC_LIKE ON)
+endif()
+
 if(NOT FLATBUFFERS_BUILD_FLATC AND FLATBUFFERS_BUILD_TESTS)
     message(WARNING
     "Cannot build tests without building the compiler. Tests will be disabled.")
@@ -54,7 +59,7 @@ endif()
 # Auto-detect locale-narrow 'strtod_l' and  'strtoull_l' functions.
 if(NOT DEFINED FLATBUFFERS_LOCALE_INDEPENDENT)
   set(FLATBUFFERS_LOCALE_INDEPENDENT 0)
-  if(MSVC)
+  if(MSVC_LIKE)
     check_cxx_symbol_exists(_strtof_l stdlib.h FLATBUFFERS_HAS_STRTOF_L)
     check_cxx_symbol_exists(_strtoui64_l stdlib.h FLATBUFFERS_HAS_STRTOULL_L)
   else()
@@ -239,7 +244,7 @@ elseif(CMAKE_COMPILER_IS_GNUCXX)
   set(CMAKE_CXX_FLAGS
     "${CMAKE_CXX_FLAGS} -fsigned-char")
 
-elseif(${CMAKE_CXX_COMPILER_ID} MATCHES "Clang")
+elseif(${CMAKE_CXX_COMPILER_ID} MATCHES "Clang" AND NOT ${MSVC_LIKE})
   set(CMAKE_CXX_FLAGS
       "${CMAKE_CXX_FLAGS} -std=c++0x -Wall -pedantic -Werror -Wextra -Wno-unused-parameter")
   set(FLATBUFFERS_PRIVATE_CXX_FLAGS "-Wold-style-cast")
@@ -263,11 +268,12 @@ elseif(${CMAKE_CXX_COMPILER_ID} MATCHES "Clang")
   set(CMAKE_CXX_FLAGS
     "${CMAKE_CXX_FLAGS} -fsigned-char")
 
-elseif(MSVC)
+elseif(${MSVC_LIKE})
   # Visual Studio pedantic build settings
   # warning C4512: assignment operator could not be generated
   # warning C4316: object allocated on the heap may not be aligned
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4 /WX /wd4512 /wd4316")
+  add_definitions(-D_CRT_SECURE_NO_WARNINGS)
 endif()
 
 if(FLATBUFFERS_CODE_COVERAGE)
@@ -283,7 +289,7 @@ function(add_fsanitize_to_target _target _sanitizer)
   else()
     # FLATBUFFERS_CODE_SANITIZE: boolean {ON,OFF,YES,NO} or string with list of sanitizer.
     # List of sanitizer is string starts with '=': "=address,undefined,thread,memory".
-    if((${CMAKE_CXX_COMPILER_ID} MATCHES "Clang") OR
+    if(((${CMAKE_CXX_COMPILER_ID} MATCHES "Clang") AND NOT ${MSVC_LIKE}) OR
       ((${CMAKE_CXX_COMPILER_ID} MATCHES "GNU") AND NOT (CMAKE_CXX_COMPILER_VERSION VERSION_LESS "4.9"))
     )
       set(_sanitizer_flags "=address,undefined")
@@ -327,11 +333,11 @@ if(FLATBUFFERS_BUILD_FLATC)
   if(NOT FLATBUFFERS_FLATC_EXECUTABLE)
     set(FLATBUFFERS_FLATC_EXECUTABLE $<TARGET_FILE:flatc>)
   endif()
-  if(MSVC)
+  if(MSVC_LIKE)
     # Make flatc.exe not depend on runtime dlls for easy distribution.
     target_compile_options(flatc PUBLIC $<$<CONFIG:Release>:/MT>)
   endif()
-  if(FLATBUFFERS_STATIC_FLATC AND NOT MSVC)
+  if(FLATBUFFERS_STATIC_FLATC AND NOT MSVC_LIKE)
     target_link_libraries(flatc PRIVATE -static)
   endif()
 endif()
