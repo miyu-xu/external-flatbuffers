@@ -51,6 +51,24 @@
       "parentUuid": "6d0b1043_fb5cad81",
       "revId": "b8f9e25bad566a23d5e178d0656910bd6b416223",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "07343efb_c6b31c81",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1576895
+      },
+      "writtenOn": "2022-08-08T21:18:21Z",
+      "side": 1,
+      "message": "It seems that the `external/tensorflow` project stops their automerger this May. I may not have time to do that.\n\nWhat do you think if I create a new branch for `external/flatbuffers`, with a different `Android.bp` file which renames the target name, set up a auto merger from the upstream branch and use that new branch for relevant projects? Does that sound good to you?",
+      "parentUuid": "97c4e90e_9db15ab8",
+      "revId": "b8f9e25bad566a23d5e178d0656910bd6b416223",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
