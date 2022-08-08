@@ -16,6 +16,23 @@
       "message": "Cherry-picked from upstream commit: https://github.com/google/flatbuffers/pull/7308/commits/34b7d95c50a45285df1c7407dce007f49b06d4e7.",
       "revId": "b8f9e25bad566a23d5e178d0656910bd6b416223",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6d0b1043_fb5cad81",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-08-08T19:47:55Z",
+      "side": 1,
+      "message": "i\u0027ve uploaded https://android-review.googlesource.com/c/platform/external/flatbuffers/+/2178256 to sync this project with upstream (we were _years_ behind), but you\u0027ll need to talk to them about getting an upstream release that includes this extra change. given that no-one\u0027s been maintaining this, i\u0027m not prepared to start forking by taking local changes --- we need to get back on the bandwagon asap.",
+      "revId": "b8f9e25bad566a23d5e178d0656910bd6b416223",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
