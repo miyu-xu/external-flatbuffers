@@ -1,3 +1,4 @@
+<<<<<<< HEAD   (dddddd Set min_sdk_version)
 # Copyright (c) 2013 Google, Inc.
 #
 # This software is provided 'as-is', without any express or implied
@@ -71,3 +72,5 @@ include $(BUILD_SHARED_LIBRARY)
 $(call import-module,android/native_app_glue)
 
 $(call import-add-path,$(LOCAL_PATH)/../..)
+=======
+>>>>>>> BRANCH (615616 Change Rust generated file defaults (#7101))
