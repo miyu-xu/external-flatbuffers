@@ -33,6 +33,24 @@
       "message": "i\u0027ve uploaded https://android-review.googlesource.com/c/platform/external/flatbuffers/+/2178256 to sync this project with upstream (we were _years_ behind), but you\u0027ll need to talk to them about getting an upstream release that includes this extra change. given that no-one\u0027s been maintaining this, i\u0027m not prepared to start forking by taking local changes --- we need to get back on the bandwagon asap.",
       "revId": "b8f9e25bad566a23d5e178d0656910bd6b416223",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97c4e90e_9db15ab8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-08-08T20:17:14Z",
+      "side": 1,
+      "message": "and it looks like there\u0027s a tensorflow dependency that will need updating there:\n\n```\nexternal/tensorflow/tensorflow/lite/schema/schema_generated.h:3355:12: error: no matching member function for call to \u0027VerifyField\u0027\n           VerifyField\u003cint32_t\u003e(verifier, VT_QUANTIZED_DIMENSION) \u0026\u0026\n           ^~~~~~~~~~~~~~~~~~~~\n```\n\nlooks like tensorflow is about a year out of date :-(\n\nfeel free to volunteer to update that; there are a ton of merge conflicts and i know nothing about tensorflow so i can\u0027t help with that.",
+      "parentUuid": "6d0b1043_fb5cad81",
+      "revId": "b8f9e25bad566a23d5e178d0656910bd6b416223",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
