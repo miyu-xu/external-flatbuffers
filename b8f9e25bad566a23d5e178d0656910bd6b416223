@@ -87,6 +87,24 @@
       "parentUuid": "07343efb_c6b31c81",
       "revId": "b8f9e25bad566a23d5e178d0656910bd6b416223",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da197d90_7c8e055a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1576895
+      },
+      "writtenOn": "2022-08-09T00:04:50Z",
+      "side": 1,
+      "message": "We have our own branch of manifest, but not our own branch of `flatbuffers`.\n\nIt\u0027s a bit unclean that we will have to checkout 2 `flatbuffers` in our Android tree - one for our own libraries, one for other aosp libraries. I am not sure if that will be problematic.\n\nWhat the Android emulator team was doing is copying the entire project into a `third_party` folder of the repo, which I don\u0027t think is a good idea, since we can\u0027t easily use git to catch up with the upstream. And I don\u0027t want to follow that path for flatbuffers.",
+      "parentUuid": "8bf4ef8e_e49e5dfe",
+      "revId": "b8f9e25bad566a23d5e178d0656910bd6b416223",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
