@@ -1,3 +1,4 @@
+<<<<<<< HEAD   (ba5b7e Set min_sdk_version am: dddddd1660)
 # Copyright (c) 2013 Google, Inc.
 #
 # This software is provided 'as-is', without any express or implied
@@ -71,3 +72,5 @@ include $(BUILD_SHARED_LIBRARY)
 $(call import-module,android/native_app_glue)
 
 $(call import-add-path,$(LOCAL_PATH)/../..)
+=======
+>>>>>>> BRANCH (836766 Flatbuffers Version 2.0.7 (#7462))
