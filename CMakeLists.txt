@@ -17,7 +17,11 @@ if(TRUE)
 endif()
 
 # Attempt to read the current version of flatbuffers by looking at the latest tag.
-include(CMake/Version.cmake)
+# include(CMake/Version.cmake)
+set(VERSION_MAJOR 2)
+set(VERSION_MINOR 0)
+set(VERSION_PATCH 7)
+set(VERSION_COMMIT 0)
 
 if (POLICY CMP0048)
   cmake_policy(SET CMP0048 NEW)
