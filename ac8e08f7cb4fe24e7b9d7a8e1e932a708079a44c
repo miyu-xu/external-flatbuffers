@@ -52,6 +52,24 @@
       "parentUuid": "64992a02_3a0f48c5",
       "revId": "ac8e08f7cb4fe24e7b9d7a8e1e932a708079a44c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d3c2321_cae989fb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1576895
+      },
+      "writtenOn": "2022-08-24T23:50:15Z",
+      "side": 1,
+      "message": "And this CL is what I want to upstream to flatbuffers: https://r.android.com/2195179.",
+      "parentUuid": "da189dc4_2ce31a8a",
+      "revId": "ac8e08f7cb4fe24e7b9d7a8e1e932a708079a44c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
