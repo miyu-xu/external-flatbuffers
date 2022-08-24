@@ -16,6 +16,24 @@
       "message": "For the failure of the `emulator-linux_x64_nolocationui on aosp-emu-master-dev`, `emulator-linux_aarch64 on aosp-emu-master-dev`, and `sdk_tools_windows on aosp-emu-master-dev`. The flatbuffers\u0027 cmake version scripts fails to discover the correct version from git output.\n```\n... -- Proceeding with version: android-mainline-12.0.0_r122-823-gac8e08f7.android-mainline-12.0.0_r122-823-gac8e08f7.android-mainline-12.0.0_r122-823-gac8e08f7.android-mainline-12.0.0_r122-823-gac8e08f7\n21:37:56(00:16.75) bld | CMake Error at C:/buildbot/src/android/emu-master-dev/external/flatbuffers/CMakeLists.txt:23 (project):\n21:37:56(00:16.52) bld | VERSION\n21:37:56(00:16.52) bld | \"android-mainline-12.0.0_r122-823-gac8e08f7.android-mainline-12.0.0_r122-823-gac8e08f7.android-mainline-12.0.0_r122-823-gac8e08f7\"\n   \n```\n\nFor the `gfxstream_sdk_tools_linux on aosp-emu-master-dev` target, it fails because our cmake scripts to detect unlicensed targets are not working properly.\n\nTo fix the version issue, I am going to patch the flatbuffers\u0027 CMakeLists.txt to not to use the CMake script to detect the version. Unfortunately, we will diverge from the upstream, but I will work on a CL in the upstream to bypass the issue. We can revert this temporary patch then.\n\nFor the failure on scripts unable to detect unlicensed targets correctly, I am going to put up a CL in external/qemu on the `emu-master-dev` branch to fix this issue, and add that CL to this topic.",
       "revId": "ac8e08f7cb4fe24e7b9d7a8e1e932a708079a44c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64992a02_3a0f48c5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1057232
+      },
+      "writtenOn": "2022-08-24T23:37:18Z",
+      "side": 1,
+      "message": "I see. I tentatively modified CMakeLists.txt to use CMakeLists_legacy.cmake.in instead in PS2. Is this something you are looking for?",
+      "parentUuid": "3e3ae264_87af3539",
+      "revId": "ac8e08f7cb4fe24e7b9d7a8e1e932a708079a44c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
