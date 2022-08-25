@@ -88,6 +88,24 @@
       "parentUuid": "5d3c2321_cae989fb",
       "revId": "ac8e08f7cb4fe24e7b9d7a8e1e932a708079a44c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8bc803b8_71c37c72",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1576895
+      },
+      "writtenOn": "2022-08-25T13:01:36Z",
+      "side": 1,
+      "message": "Sure. I will upload the other fix and add that to this topic.",
+      "parentUuid": "30660761_47b249e9",
+      "revId": "ac8e08f7cb4fe24e7b9d7a8e1e932a708079a44c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
