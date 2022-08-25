@@ -16,6 +16,24 @@
       "message": "We need to add a TODO comment here so that we know the reason we diverge from the upstream, and track the task to follow the upstream again.",
       "revId": "9fa9c93446890af0af6ace58955e246adf507ee6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9cb43e1d_8df4c015",
+        "filename": "CMakeLists.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1576895
+      },
+      "writtenOn": "2022-08-25T13:44:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d1e3859b_617a4a28",
+      "revId": "9fa9c93446890af0af6ace58955e246adf507ee6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
