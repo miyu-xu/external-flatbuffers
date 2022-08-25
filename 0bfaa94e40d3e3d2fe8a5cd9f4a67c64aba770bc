@@ -16,6 +16,24 @@
       "message": "I would suggest changing CMake/Version.cmake instead of this file, mainly because it\u0027s likely this file will get out of date with the hardcoded version. Especially since cmake is not used on the master branch.",
       "revId": "0bfaa94e40d3e3d2fe8a5cd9f4a67c64aba770bc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cfcbbbc8_2e4c735d",
+        "filename": "CMakeLists.txt",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1576895
+      },
+      "writtenOn": "2022-08-25T14:27:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6174203b_eb34e1c3",
+      "revId": "0bfaa94e40d3e3d2fe8a5cd9f4a67c64aba770bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
