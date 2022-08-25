@@ -1,3 +1,4 @@
+<<<<<<< HEAD   (051377 [Bluetooth apex] Use new apex name)
 # Copyright (c) 2013 Google, Inc.
 #
 # This software is provided 'as-is', without any express or implied
@@ -57,3 +58,5 @@ $(call import-add-path,$(FLATBUFFERS_ROOT_DIR)/..)
 
 $(call import-module,flatbuffers/android/jni)
 $(call import-module,android/native_app_glue)
+=======
+>>>>>>> BRANCH (fef2ff Use schema include name for keep-prefix (#7469))
