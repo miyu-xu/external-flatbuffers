@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "27871502_97ede1f4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1576895
+      },
+      "writtenOn": "2022-08-26T16:26:36Z",
+      "side": 1,
+      "message": "Hi Miao, do we expect this change to be landed soon? If not, I can remove https://r.android.com/2196957 from the topic, and land that change earlier to avoid potential merge conflicts in `external/qemu` which is under active development.",
+      "revId": "6884dab3a14c5ecbe7ecf2575876359ccfb42bf8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
