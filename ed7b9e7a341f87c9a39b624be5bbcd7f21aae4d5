@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e936c4e_902bb072",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1106808
+      },
+      "writtenOn": "2022-08-31T23:35:02Z",
+      "side": 1,
+      "message": "This was very recently updated. \n\nHere is a CL that is related to noto-fonts and emoji-compat\n\nhttps://android-review.googlesource.com/c/platform/external/noto-fonts/+/2194346\n\n\nThe change requires a similar update and also regeneration maven artifact,\n\nCan you please check comments section of https://android-review.googlesource.com/c/platform/external/noto-fonts/+/2194346 \n-  comments related to running emojiCompat tests and also updating  \nTest: ./gradlew :e2:e2:cAT :emoji:emoji:cAT   (in AndroidX)\nTest: ./gradlew :e2:e2-bun:cAT  (in AndroidX)\n\n- updates for emoji-compat-flatbuffers/\n- also \"AndroidX also need to update the maven prebuilt\" go/androidx-dev#importing-dependencies-in-libsversionstoml",
+      "range": {
+        "startLine": 10,
+        "startChar": 6,
+        "endLine": 10,
+        "endChar": 10
+      },
+      "revId": "ed7b9e7a341f87c9a39b624be5bbcd7f21aae4d5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
