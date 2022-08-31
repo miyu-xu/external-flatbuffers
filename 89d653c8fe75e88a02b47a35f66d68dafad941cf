@@ -16,6 +16,24 @@
       "message": "use `./tools/external_updater/updater.sh update --branch_and_commit --push_change flatbuffers` in the root of your tree to do this correctly with the appropriate METADATA update...",
       "revId": "89d653c8fe75e88a02b47a35f66d68dafad941cf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff14af43_81c50fb8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1576895
+      },
+      "writtenOn": "2022-08-31T21:17:39Z",
+      "side": 1,
+      "message": "Generate https://r.android.com/2202517.",
+      "parentUuid": "b8356370_5eda8a17",
+      "revId": "89d653c8fe75e88a02b47a35f66d68dafad941cf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
