@@ -46,6 +46,30 @@
       },
       "revId": "ed7b9e7a341f87c9a39b624be5bbcd7f21aae4d5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1273a067_d7cfc8bd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1106808
+      },
+      "writtenOn": "2022-09-01T05:44:56Z",
+      "side": 1,
+      "message": "Added Sean as reviewer as the owner.\n\nLet me add multiple comments with numbers so that we can point them.\n\n1. Consider creating new CLs on top of this CL that updates androidx. \n\n2. In order to update java files you will have to run the flatbuffer schema generation on emojimetadata fbs file (https://source.corp.google.com/android/external/noto-fonts/emoji-compat-flatbuffers/data/emoji_metadata.fbs)\n2.1: Most of the time changing the version numbers in the Java file should be enough. Please check https://android-review.googlesource.com/c/platform/external/noto-fonts/+/2194346\n\n3. update build.gradle file: https://android-review.googlesource.com/c/platform/external/noto-fonts/+/2194346/2/emoji-compat-flatbuffers/build.gradle\n\n4. You will need to update the androidx prebuilts or maven for the new library. Ex: https://android-review.googlesource.com/c/platform/prebuilts/androidx/external/+/2199495\n4.1 the androidx checkout is described at go/androidx-dev\n4.2 updating the maven libraries is described at go/androidx-dev#downloading-a-dependency-without-changing-libsversionstoml\n\n5. Please add to the commit message and run the following tests in androidx checkout (go/androidx-dev)\n```\nTest: ./gradlew :e2:e2:cAT :emoji:emoji:cAT   (in AndroidX)\nTest: ./gradlew :e2:e2-bun:cAT  (in AndroidX)\n```\n\nConsider also asking to Miao Wang who is the owner of the referenced CL as he has update flatbuffers just a few days ago. Their CLs should be a good guidance for this update.",
+      "parentUuid": "8cc9f5a4_d60ad51f",
+      "range": {
+        "startLine": 10,
+        "startChar": 6,
+        "endLine": 10,
+        "endChar": 10
+      },
+      "revId": "ed7b9e7a341f87c9a39b624be5bbcd7f21aae4d5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
