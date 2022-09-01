@@ -22,6 +22,30 @@
       },
       "revId": "ed7b9e7a341f87c9a39b624be5bbcd7f21aae4d5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8cc9f5a4_d60ad51f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1576895
+      },
+      "writtenOn": "2022-09-01T00:29:30Z",
+      "side": 1,
+      "message": "Hi Siyamed,\n\nI don\u0027t seem to find the instruction in the original commit message to regenerate `emoji-compat-flatbuffers/src/java/androidx/text/emoji/flatbuffer/{MetadataItem,MetadataList}.java`. I am wondering if you know where I could find the command? Thanks.",
+      "parentUuid": "6e936c4e_902bb072",
+      "range": {
+        "startLine": 10,
+        "startChar": 6,
+        "endLine": 10,
+        "endChar": 10
+      },
+      "revId": "ed7b9e7a341f87c9a39b624be5bbcd7f21aae4d5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
