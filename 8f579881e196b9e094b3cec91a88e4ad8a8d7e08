@@ -87,6 +87,30 @@
       },
       "revId": "8f579881e196b9e094b3cec91a88e4ad8a8d7e08",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2164a4f_6b61bc0e",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2022-11-02T17:46:00Z",
+      "side": 1,
+      "message": "That seems to be a for a non-apex variant, where apex_inherit won\u0027t help.  OnDevicePersonalization has `min_sdk_version: \"Tiramisu\"`, so I think you\u0027ll need something less than or equal to that here.",
+      "parentUuid": "201a50ee_0c2d90d3",
+      "range": {
+        "startLine": 98,
+        "startChar": 22,
+        "endLine": 98,
+        "endChar": 24
+      },
+      "revId": "8f579881e196b9e094b3cec91a88e4ad8a8d7e08",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
