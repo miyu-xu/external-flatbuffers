@@ -39,6 +39,30 @@
       },
       "revId": "8f579881e196b9e094b3cec91a88e4ad8a8d7e08",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "056213a1_6fc3444f",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1937850
+      },
+      "writtenOn": "2022-11-02T16:55:47Z",
+      "side": 1,
+      "message": "I\u0027m getting errors building our apex with flatbuffers using \"apex_inherit\" here:\n\n```\nerror: external/flatbuffers/Android.bp:94:1: module \"flatbuffers-java\" variant \"android_common\": should support min_sdk_version(33) for \"OnDevicePersonaliz\nation\": min_sdk_version is not specified.\n```\n\nI initially chose 30 since that was what the cc_library libflatbuffers-cpp below had set.",
+      "parentUuid": "a1c08b1d_0e617731",
+      "range": {
+        "startLine": 98,
+        "startChar": 22,
+        "endLine": 98,
+        "endChar": 24
+      },
+      "revId": "8f579881e196b9e094b3cec91a88e4ad8a8d7e08",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
