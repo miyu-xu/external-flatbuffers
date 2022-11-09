@@ -135,6 +135,30 @@
       },
       "revId": "8f579881e196b9e094b3cec91a88e4ad8a8d7e08",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ffba3db_5a9f9cb0",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1937850
+      },
+      "writtenOn": "2022-11-09T15:43:11Z",
+      "side": 1,
+      "message": "My understanding is that the reason OnDevicePersonalization is building as a non-apex variant is because the module is setup to be apk-in-apex. So when the apk for our android_app is being built, it is a non-apex variant.",
+      "parentUuid": "ab502dbc_3f7601de",
+      "range": {
+        "startLine": 98,
+        "startChar": 22,
+        "endLine": 98,
+        "endChar": 24
+      },
+      "revId": "8f579881e196b9e094b3cec91a88e4ad8a8d7e08",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
