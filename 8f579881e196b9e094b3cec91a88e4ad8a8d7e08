@@ -20,6 +20,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4d6f0001_83292b9a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-11-09T17:31:03Z",
+      "side": 1,
+      "message": "that\u0027s annoying, because it\u0027ll make it harder for us to clean this up when your dependency is removed/doesn\u0027t care about api level 30 any more, but it sounds like ccross is saying there isn\u0027t a better alternative at the moment, so...",
+      "revId": "8f579881e196b9e094b3cec91a88e4ad8a8d7e08",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a1c08b1d_0e617731",
         "filename": "Android.bp",
         "patchSetId": 1
