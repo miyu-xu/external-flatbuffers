@@ -16,6 +16,23 @@
       "message": "+srhines,mmaurer for the rust side.\n\nbut if we [already|are going to] do this, we probably need to teach external_updater about these .bp files, so it can re-run cargo2android.py when the project is updated?",
       "revId": "c5bf56111622978e012a4248837ed4ea8eb8bdca",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f17527de_91a10831",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2023-07-07T16:11:28Z",
+      "side": 1,
+      "message": "Seems fine from a Rust perspective.\n\nFrom an external_updater perspective, we *could* manage this through the flatbuffers crate on crates.io, but this has the benefit of being default in sync with the underlying library.\n\nOne possibility (which I don\u0027t think should block this change) would be to make external_updater scan for the c2a command line in Android.bp headers, and trigger regen_bp.sh based on that. It would both handle the regular crate update triggering, and C/C++ packages with ride-along rust bindings like this one.",
+      "revId": "c5bf56111622978e012a4248837ed4ea8eb8bdca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
