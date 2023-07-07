@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "42feae40_dd551299",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-07-07T15:30:26Z",
+      "side": 1,
+      "message": "+srhines,mmaurer for the rust side.\n\nbut if we [already|are going to] do this, we probably need to teach external_updater about these .bp files, so it can re-run cargo2android.py when the project is updated?",
+      "revId": "c5bf56111622978e012a4248837ed4ea8eb8bdca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
