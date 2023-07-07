@@ -33,6 +33,24 @@
       "message": "Seems fine from a Rust perspective.\n\nFrom an external_updater perspective, we *could* manage this through the flatbuffers crate on crates.io, but this has the benefit of being default in sync with the underlying library.\n\nOne possibility (which I don\u0027t think should block this change) would be to make external_updater scan for the c2a command line in Android.bp headers, and trigger regen_bp.sh based on that. It would both handle the regular crate update triggering, and C/C++ packages with ride-along rust bindings like this one.",
       "revId": "c5bf56111622978e012a4248837ed4ea8eb8bdca",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "135f513c_a451ae78",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2023-07-07T16:11:44Z",
+      "side": 1,
+      "message": "Seems fine from a Rust perspective.\n\nFrom an external_updater perspective, we could manage this through the flatbuffers crate on crates.io, but this has the benefit of being default in sync with the underlying library.\n\nOne possibility (which I don\u0027t think should block this change) would be to make external_updater scan for the c2a command line in Android.bp headers, and trigger regen_bp.sh based on that. It would both handle the regular crate update triggering, and C/C++ packages with ride-along rust bindings like this one.",
+      "parentUuid": "42feae40_dd551299",
+      "revId": "c5bf56111622978e012a4248837ed4ea8eb8bdca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
