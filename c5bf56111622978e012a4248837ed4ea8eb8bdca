@@ -51,6 +51,24 @@
       "parentUuid": "42feae40_dd551299",
       "revId": "c5bf56111622978e012a4248837ed4ea8eb8bdca",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd271bb9_929b7dbc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2023-07-07T16:48:01Z",
+      "side": 1,
+      "message": "+1 for teaching external_updater to run c2a based on actual file contents rather than paths, especially as we see more C++/Rust integration.",
+      "parentUuid": "135f513c_a451ae78",
+      "revId": "c5bf56111622978e012a4248837ed4ea8eb8bdca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
