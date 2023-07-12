@@ -69,6 +69,24 @@
       "parentUuid": "135f513c_a451ae78",
       "revId": "c5bf56111622978e012a4248837ed4ea8eb8bdca",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "395b4c44_98eff12a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986660
+      },
+      "writtenOn": "2023-07-12T09:36:11Z",
+      "side": 1,
+      "message": "Thanks! It seems there\u0027s no suggestions for this CL in this thread, so I\u0027ll mark it as resolved. Please let me know if I missed anything 😊",
+      "parentUuid": "dd271bb9_929b7dbc",
+      "revId": "c5bf56111622978e012a4248837ed4ea8eb8bdca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
