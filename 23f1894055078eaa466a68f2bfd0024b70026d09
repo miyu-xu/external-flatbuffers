@@ -88,6 +88,24 @@
       "parentUuid": "1ec754d5_622f73cb",
       "revId": "23f1894055078eaa466a68f2bfd0024b70026d09",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "41c35a62_515dc64b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986660
+      },
+      "writtenOn": "2023-07-18T18:26:26Z",
+      "side": 1,
+      "message": "Yes, we\u0027d like to use flatbuffers in Rust code. With the help of Android Rust folks we added an Android.bp file that allows us to use the existing version, but it\u0027s pretty old by now. We\u0027d like to make sure the flatbuffers sources in Android are kept up-to-date - and we\u0027re willing to help in any way necessary.",
+      "parentUuid": "2eac7411_28a633d6",
+      "revId": "23f1894055078eaa466a68f2bfd0024b70026d09",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
