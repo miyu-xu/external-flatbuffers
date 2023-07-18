@@ -70,6 +70,24 @@
       "parentUuid": "1ec754d5_622f73cb",
       "revId": "23f1894055078eaa466a68f2bfd0024b70026d09",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2eac7411_28a633d6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-07-18T18:14:09Z",
+      "side": 1,
+      "message": "(oh, and dwillemsen implied that you were also interested in rust? --- let us know if you haven\u0027t talked to the rust folks already and we can connect you with them for any rust maintenance/support stuff.)",
+      "parentUuid": "1ec754d5_622f73cb",
+      "revId": "23f1894055078eaa466a68f2bfd0024b70026d09",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
