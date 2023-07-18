@@ -34,6 +34,24 @@
       "parentUuid": "8e3690c3_95a6a44e",
       "revId": "23f1894055078eaa466a68f2bfd0024b70026d09",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1ec754d5_622f73cb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-07-18T18:10:49Z",
+      "side": 1,
+      "message": "yeah, i think \"unless you\u0027ve had trouble with the janitors, just add them for +2\" (and just drag me/sadafebrahimi in if in doubt). +sadafebrahimi is the expert on external-updater, and will probably know if there\u0027s any reason why this project isn\u0027t being updated yet (it looks like a good candidate?). if/once upstream-master is set up, the command you need to update the library cleanly will be in the METADATA file as a comment (see https://source.corp.google.com/search?q\u003dfile:external%2F.*%2Fmetadata%20external_updater for examples).",
+      "parentUuid": "2563dfca_41555472",
+      "revId": "23f1894055078eaa466a68f2bfd0024b70026d09",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
