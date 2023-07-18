@@ -52,6 +52,24 @@
       "parentUuid": "2563dfca_41555472",
       "revId": "23f1894055078eaa466a68f2bfd0024b70026d09",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d87b8744_a93a5ed3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986660
+      },
+      "writtenOn": "2023-07-18T18:13:33Z",
+      "side": 1,
+      "message": "Thank you for taking the time to explain! aosp/2660883 reverts this CL.",
+      "parentUuid": "1ec754d5_622f73cb",
+      "revId": "23f1894055078eaa466a68f2bfd0024b70026d09",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
