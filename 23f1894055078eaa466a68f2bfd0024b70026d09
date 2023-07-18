@@ -16,6 +16,24 @@
       "message": "please do _not_ update this without using external-updater, and please make sure the janitors are cc:ed on any cls that touch this project.",
       "revId": "23f1894055078eaa466a68f2bfd0024b70026d09",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2563dfca_41555472",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986660
+      },
+      "writtenOn": "2023-07-18T17:46:24Z",
+      "side": 1,
+      "message": "Sorry for that. Should I revert this CL?\n\nHow should we approach supporting maintenance of this library in Android source tree instead?",
+      "parentUuid": "8e3690c3_95a6a44e",
+      "revId": "23f1894055078eaa466a68f2bfd0024b70026d09",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
