@@ -124,6 +124,24 @@
       "parentUuid": "41c35a62_515dc64b",
       "revId": "23f1894055078eaa466a68f2bfd0024b70026d09",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "afd38fe1_cd1382c9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-07-19T20:50:42Z",
+      "side": 1,
+      "message": "and _of course_ it\u0027s not easy ... sadafebrahimi\u0027s looking into it! (and may have questions about how to regenerate the files in https://source.corp.google.com/h/android/platform/superproject/main/+/main:external/noto-fonts/emoji-compat-flatbuffers/src/java/androidx/text/emoji/flatbuffer/ --- we should probably replace that with a genrule rather than continue to check in generated code. i\u0027m assuming there\u0027s no existing flatbuffers support, but +ccross will know...)",
+      "parentUuid": "75107ab6_2a875d26",
+      "revId": "23f1894055078eaa466a68f2bfd0024b70026d09",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
