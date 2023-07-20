@@ -25,12 +25,34 @@ public class GadgetUnion {
   public HandFanT AsHandFan() { return this.As<HandFanT>(); }
   public static GadgetUnion FromHandFan(HandFanT _handfan) { return new GadgetUnion{ Type = Gadget.HandFan, Value = _handfan }; }
 
-  public static int Pack(FlatBuffers.FlatBufferBuilder builder, GadgetUnion _o) {
+  public static int Pack(Google.FlatBuffers.FlatBufferBuilder builder, GadgetUnion _o) {
     switch (_o.Type) {
       default: return 0;
       case Gadget.FallingTub: return FallingTub.Pack(builder, _o.AsFallingTub()).Value;
       case Gadget.HandFan: return HandFan.Pack(builder, _o.AsHandFan()).Value;
     }
+  }
+}
+
+
+
+static public class GadgetVerify
+{
+  static public bool Verify(Google.FlatBuffers.Verifier verifier, byte typeId, uint tablePos)
+  {
+    bool result = true;
+    switch((Gadget)typeId)
+    {
+      case Gadget.FallingTub:
+        result = verifier.VerifyUnionData(tablePos, 4, 4);
+        break;
+      case Gadget.HandFan:
+        result = HandFanVerify.Verify(verifier, tablePos);
+        break;
+      default: result = true;
+        break;
+    }
+    return result;
   }
 }
 
