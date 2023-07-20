@@ -45,7 +45,6 @@ license {
     ],
     license_text: [
         "LICENSE",
-        "LICENSE.txt",
     ],
 }
 
@@ -73,7 +72,6 @@ cc_binary_host {
         "-Wall",
         "-Werror",
         "-Wextra",
-        "-Werror=shadow",
         "-Wno-implicit-fallthrough", // in reflection.cpp
     ],
 
@@ -94,6 +92,9 @@ cc_binary_host {
 java_library {
     name: "flatbuffers-java",
     srcs: ["java/**/*.java"],
+    exclude_srcs: [
+        "java/src/test/**/*.java",
+    ],
     sdk_version: "current",
     min_sdk_version: "30",
 
