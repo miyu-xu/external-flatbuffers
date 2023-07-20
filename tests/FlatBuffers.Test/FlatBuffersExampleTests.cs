@@ -21,7 +21,7 @@ using MyGame.Example;
 using optional_scalars;
 using KeywordTest;
 
-namespace FlatBuffers.Test
+namespace Google.FlatBuffers.Test
 {
     [FlatBuffersTestClass]
     public class FlatBuffersExampleTests
@@ -198,6 +198,9 @@ namespace FlatBuffers.Test
 
         private void TestBuffer(ByteBuffer bb)
         {
+            bool test = Monster.VerifyMonster(bb);
+            Assert.AreEqual(true, test);
+
             Monster monster = Monster.GetRootAsMonster(bb);
 
             Assert.AreEqual(80, monster.Hp);
@@ -299,7 +302,7 @@ namespace FlatBuffers.Test
             var jsonText = File.ReadAllText(@"../monsterdata_test.json");
             var mon = MonsterT.DeserializeFromJson(jsonText);
             var fbb = new FlatBufferBuilder(1);
-            fbb.Finish(Monster.Pack(fbb, mon).Value);
+            Monster.FinishMonsterBuffer(fbb, Monster.Pack(fbb, mon));
             TestBuffer(fbb.DataBuffer);
         }
 
