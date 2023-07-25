@@ -52,6 +52,24 @@
       "parentUuid": "6b4387de_87351453",
       "revId": "d8219792b5077dbf3370c84c756a048dbf1b62ea",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bf020e66_1847e740",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-07-25T22:05:23Z",
+      "side": 1,
+      "message": "or we can just `-DFLATBUFFERS_USE_STD_SPAN\u003d0` in the cflags? oh, except this is needed by _calling_ code. looks like they don\u0027t have any \"put your local configuration here\" file like gtest does?",
+      "parentUuid": "cbecfc7a_ef766712",
+      "revId": "d8219792b5077dbf3370c84c756a048dbf1b62ea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
