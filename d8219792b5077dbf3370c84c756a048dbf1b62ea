@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e2d94f89_fe5e8af2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-07-25T20:49:47Z",
+      "side": 1,
+      "message": "oh, that\u0027s an interesting new failure...\n```\nexternal/flatbuffers/include/flatbuffers/stl_emulation.h:284:29: error: non-type template argument evaluates to 4294967295, which cannot be narrowed to type \u0027ptrdiff_t\u0027 (aka \u0027int\u0027) [-Wc++11-narrowing]\nusing span \u003d std::span\u003cT, Extent\u003e;\n^\n```\nthis sounds like a problem that +rprichard is looking at right now ... it looks like the current version of flatbuffers might require a newer version of libc++ than we currently have?",
+      "revId": "d8219792b5077dbf3370c84c756a048dbf1b62ea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
