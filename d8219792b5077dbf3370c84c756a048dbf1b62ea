@@ -70,6 +70,24 @@
       "parentUuid": "cbecfc7a_ef766712",
       "revId": "d8219792b5077dbf3370c84c756a048dbf1b62ea",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ed98c6d_83693aa8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1229339
+      },
+      "writtenOn": "2023-07-25T22:51:16Z",
+      "side": 1,
+      "message": "It checks the macro using `#if defined(FLATBUFFERS_USE_STD_SPAN)` instead of `#if FLATBUFFERS_USE_STD_SPAN`. Maybe it `#define`s the preprocessor symbol to 1 for consistency with the `-D` command-line option.",
+      "parentUuid": "bf020e66_1847e740",
+      "revId": "d8219792b5077dbf3370c84c756a048dbf1b62ea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
