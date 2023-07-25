@@ -37,7 +37,7 @@ public class CharacterUnion {
   public string AsUnused() { return this.As<string>(); }
   public static CharacterUnion FromUnused(string _unused) { return new CharacterUnion{ Type = Character.Unused, Value = _unused }; }
 
-  public static int Pack(FlatBuffers.FlatBufferBuilder builder, CharacterUnion _o) {
+  public static int Pack(Google.FlatBuffers.FlatBufferBuilder builder, CharacterUnion _o) {
     switch (_o.Type) {
       default: return 0;
       case Character.MuLan: return Attacker.Pack(builder, _o.AsMuLan()).Value;
@@ -47,6 +47,40 @@ public class CharacterUnion {
       case Character.Other: return builder.CreateString(_o.AsOther()).Value;
       case Character.Unused: return builder.CreateString(_o.AsUnused()).Value;
     }
+  }
+}
+
+
+
+static public class CharacterVerify
+{
+  static public bool Verify(Google.FlatBuffers.Verifier verifier, byte typeId, uint tablePos)
+  {
+    bool result = true;
+    switch((Character)typeId)
+    {
+      case Character.MuLan:
+        result = AttackerVerify.Verify(verifier, tablePos);
+        break;
+      case Character.Rapunzel:
+        result = verifier.VerifyUnionData(tablePos, 4, 4);
+        break;
+      case Character.Belle:
+        result = verifier.VerifyUnionData(tablePos, 4, 4);
+        break;
+      case Character.BookFan:
+        result = verifier.VerifyUnionData(tablePos, 4, 4);
+        break;
+      case Character.Other:
+       result = verifier.VerifyUnionString(tablePos);
+        break;
+      case Character.Unused:
+       result = verifier.VerifyUnionString(tablePos);
+        break;
+      default: result = true;
+        break;
+    }
+    return result;
   }
 }
 
