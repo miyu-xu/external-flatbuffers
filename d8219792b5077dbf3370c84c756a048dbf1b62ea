@@ -16,6 +16,24 @@
       "message": "oh, that\u0027s an interesting new failure...\n```\nexternal/flatbuffers/include/flatbuffers/stl_emulation.h:284:29: error: non-type template argument evaluates to 4294967295, which cannot be narrowed to type \u0027ptrdiff_t\u0027 (aka \u0027int\u0027) [-Wc++11-narrowing]\nusing span \u003d std::span\u003cT, Extent\u003e;\n^\n```\nthis sounds like a problem that +rprichard is looking at right now ... it looks like the current version of flatbuffers might require a newer version of libc++ than we currently have?",
       "revId": "d8219792b5077dbf3370c84c756a048dbf1b62ea",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b4387de_87351453",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1229339
+      },
+      "writtenOn": "2023-07-25T21:56:00Z",
+      "side": 1,
+      "message": "external/libcxx has an incompatible pre-standardardized std::span (ptrdiff_t size instead of size_t size). It doesn\u0027t define __cpp_lib_span, but __cplusplus will be 202002L.\n\nIt looks like flatbuffers defines a substitute span class, as long as FLATBUFFERS_USE_STD_SPAN is undefined, so I think the fix is to prevent that macro from being defined.\n\nLooks like this commit broke it for us:\n\nhttps://github.com/google/flatbuffers/commit/a6f41944899e65b38ec45ee82f6840248f06b471\n\nThey\u0027re right, though, that a conforming C++20 library would have a working std::span.\n\nThis version should work for us (and maybe upstream would accept it):\n\n```\n#ifndef FLATBUFFERS_USE_STD_SPAN\n  // Clang versions 7 to 10 provide a std::span and a \u003cversion\u003e header but do\n  // not define the __cpp_lib_span feature macro. The std::span in the\n  // earliest of these libraries is very incompatible with the final\n  // std::span (e.g. the size is ptrdiff_t instead of size_t).\n  if defined(__cplusplus) \u0026\u0026 __cplusplus \u003e\u003d 202002L\n    #include \u003cversion\u003e\n  #endif\n  #if defined(__cpp_lib_span) \u0026\u0026 __cpp_lib_span \u003e\u003d 202002L\n    #define FLATBUFFERS_USE_STD_SPAN 1\n  #endif\n#endif // FLATBUFFERS_USE_STD_SPAN\n```\n\nThe other fix is changing the language mode from C++20 to C++17 for building flatbuffers, but I\u0027m not sure if that has other consequences.",
+      "parentUuid": "e2d94f89_fe5e8af2",
+      "revId": "d8219792b5077dbf3370c84c756a048dbf1b62ea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
