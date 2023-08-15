@@ -88,6 +88,24 @@
       "parentUuid": "bf020e66_1847e740",
       "revId": "d8219792b5077dbf3370c84c756a048dbf1b62ea",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67ff131b_5a113d6b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-08-15T19:23:50Z",
+      "side": 1,
+      "message": "i guess replacing\n```\n#ifndef FLATBUFFERS_USE_STD_SPAN\n```\nwith\n```\n#if 0 // TODO: change back to `ifndef FLATBUFFERS_USE_STD_SPAN` when http://b/175635923 is fixed\n```\nis the easiest way forward for now? (given rprichard\u0027s point above about _both_ checks checking whether the macro is _defined_ rather than what value it has, i don\u0027t think we have an alternative.)",
+      "parentUuid": "8ed98c6d_83693aa8",
+      "revId": "d8219792b5077dbf3370c84c756a048dbf1b62ea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
