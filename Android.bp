@@ -71,7 +71,6 @@ cc_binary_host {
 
     cppflags: [
         "-fsigned-char",
-        "-pedantic",
         "-Wall",
         "-Werror",
         "-Wextra",
