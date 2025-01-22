@@ -16,6 +16,24 @@
       "message": "This is a prerequisite for the CL that updates external/flatbuffers to the newest upstream version. We need this to use the new reflection API in Rust.\n\n@kaiyili@google.com I saw that the orignial change was a temporary workaround that\u0027s supposed to be already fixed upstream (b/243773680). Can you please confirm this CL works for you?",
       "revId": "ebc71e527faea40003bd96dc3c07008d3c7e3413",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "abce8b7c_9249b5cf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1576895
+      },
+      "writtenOn": "2025-01-22T15:26:27Z",
+      "side": 1,
+      "message": "I see that https://android-review.git.corp.google.com/c/platform/external/flatbuffers/+/3461628/3?usp\u003drelated-change is in the same topic(and the fix is [this commit](https://android-review.git.corp.google.com/c/platform/external/flatbuffers/+/3461628/3//MERGE_LIST#493) that are merged). As long as the upgrade CL is submitted together, I am Ok with it.",
+      "parentUuid": "dab5cace_07d95446",
+      "revId": "ebc71e527faea40003bd96dc3c07008d3c7e3413",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
