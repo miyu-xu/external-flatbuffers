@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dab5cace_07d95446",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986660
+      },
+      "writtenOn": "2025-01-22T13:37:50Z",
+      "side": 1,
+      "message": "This is a prerequisite for the CL that updates external/flatbuffers to the newest upstream version. We need this to use the new reflection API in Rust.\n\n@kaiyili@google.com I saw that the orignial change was a temporary workaround that\u0027s supposed to be already fixed upstream (b/243773680). Can you please confirm this CL works for you?",
+      "revId": "ebc71e527faea40003bd96dc3c07008d3c7e3413",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
