@@ -16,6 +16,24 @@
       "message": "This is a prerequisite for the CL that updates external/flatbuffers to the newest upstream version.",
       "revId": "259ad813f73401f195d53bc0fb79f0a50590b65a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "533ecbf0_2b92267c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986660
+      },
+      "writtenOn": "2025-01-23T12:07:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c3bce001_c726d211",
+      "revId": "259ad813f73401f195d53bc0fb79f0a50590b65a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
