@@ -1,7 +1,7 @@
 {
   "run_cargo": false,
   "package": {
-    "flatbuffers": {
+    "flatbuffers_reflection": {
       "patch": "Android.bp.patch"
     }
   }
