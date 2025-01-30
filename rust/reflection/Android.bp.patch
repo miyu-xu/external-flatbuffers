@@ -1,0 +1,15 @@
+--- Android.bp.orig	2025-01-30 14:40:04.480840946 +0000
++++ Android.bp	2025-01-30 14:40:31.314382587 +0000
+@@ -3,7 +3,11 @@
+ // because the changes will be overridden on upgrade.
+ // Content before the first "rust_*" or "genrule" module is preserved.
+ 
+-// DO NOT SUBMIT: Add license before submitting.
++package {
++    default_applicable_licenses: ["external_flatbuffers_license"],
++    default_team: "trendy_team_android_rust",
++}
++
+ rust_library {
+     name: "libflatbuffers_reflection",
+     host_supported: true,
