@@ -16,6 +16,24 @@
       "message": "It\u0027s back now? Did regenerating in place somehow pass with this present?",
       "revId": "4bf064523c4976b39a470eb8a5c4b4cff5f4a7c5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b82b44b8_a67d5cd2",
+        "filename": "rust/flatbuffers/Android.bp.patch",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1986660
+      },
+      "writtenOn": "2025-02-04T19:32:54Z",
+      "side": 1,
+      "message": "Explanation in other thread: https://android-review.git.corp.google.com/c/platform/external/flatbuffers/+/3469256/comment/4ae80af3_edb2a9db/",
+      "parentUuid": "4f522c29_c70735f4",
+      "revId": "4bf064523c4976b39a470eb8a5c4b4cff5f4a7c5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
