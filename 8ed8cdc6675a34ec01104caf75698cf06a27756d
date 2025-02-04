@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "34ff902a_518c72a0",
+        "filename": "rust/flatbuffers/Android.bp.patch",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1986660
+      },
+      "writtenOn": "2025-02-04T19:43:45Z",
+      "side": 1,
+      "message": "Oh, also: \n\n\u003e Did regenerating in place somehow pass with this present?\n\nYes, `cargo_embargo generate cargo_embargo.json` a no-op with this in place.",
+      "parentUuid": "d43c7f94_93f663b1",
+      "revId": "8ed8cdc6675a34ec01104caf75698cf06a27756d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "85778685_66a5ecf8",
         "filename": "rust/reflection/Android.bp.patch",
         "patchSetId": 2
