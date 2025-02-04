@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d43c7f94_93f663b1",
+        "filename": "rust/flatbuffers/Android.bp.patch",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1986660
+      },
+      "writtenOn": "2025-02-04T19:30:44Z",
+      "side": 1,
+      "message": "@mmaurer@google.com I had to revert to using a patch for `libflatbuffers`. Without it, `cargo_embargo` finds the `license \u003d \"Apache-2.0\"` in `Cargo.toml` and overwrites the edited `package`/`license` in Android.bp with its own ones. The generated ones refer to a `LICENSE` file that doesn\u0027t exist in this directory, and the build fails.\n\nThere is one 2 directories above, in `external/flatbuffers`. But I can\u0027t refer to it by relative path, because Soong doesn\u0027t allow references outside the package directory.\n\nIs there a better way? A `LICENSE` symlink could work I guess?",
+      "parentUuid": "7eb27c1f_aed8909d",
+      "revId": "8ed8cdc6675a34ec01104caf75698cf06a27756d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "85778685_66a5ecf8",
         "filename": "rust/reflection/Android.bp.patch",
         "patchSetId": 2
