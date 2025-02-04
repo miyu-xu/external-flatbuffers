@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f72bd6e_c975f924",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986660
+      },
+      "writtenOn": "2025-02-04T18:39:59Z",
+      "side": 1,
+      "message": "One more update to flatbuffers, that fixes issues with dependencies of the Rust code that prevented it from building in Android tree.",
+      "revId": "bc1835999110bd9c7ab4383db1b13f22e750279e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
