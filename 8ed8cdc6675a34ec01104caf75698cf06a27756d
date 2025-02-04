@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4ae80af3_edb2a9db",
+        "filename": "rust/flatbuffers/Android.bp.patch",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2025-02-04T18:44:27Z",
+      "side": 1,
+      "message": "I don\u0027t think this should be in a patchfile - unless I\u0027m mistaken, the package and license blurbs get preserved by cargo_embargo, which means if you try to regenerate *again* it will fail now.",
+      "revId": "8ed8cdc6675a34ec01104caf75698cf06a27756d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85778685_66a5ecf8",
+        "filename": "rust/reflection/Android.bp.patch",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1416371
+      },
+      "writtenOn": "2025-02-04T18:44:27Z",
+      "side": 1,
+      "message": "As with the other one, I think this will fail to regenerate again.",
+      "revId": "8ed8cdc6675a34ec01104caf75698cf06a27756d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
