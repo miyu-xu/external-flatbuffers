@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7eb27c1f_aed8909d",
+        "filename": "rust/flatbuffers/Android.bp.patch",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1986660
+      },
+      "writtenOn": "2025-02-04T19:00:06Z",
+      "side": 1,
+      "message": "TIL, nice! Thank you 😊",
+      "parentUuid": "4ae80af3_edb2a9db",
+      "revId": "8ed8cdc6675a34ec01104caf75698cf06a27756d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "85778685_66a5ecf8",
@@ -31,6 +49,24 @@
       "writtenOn": "2025-02-04T18:44:27Z",
       "side": 1,
       "message": "As with the other one, I think this will fail to regenerate again.",
+      "revId": "8ed8cdc6675a34ec01104caf75698cf06a27756d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d831b5f5_266fb9c2",
+        "filename": "rust/reflection/Android.bp.patch",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1986660
+      },
+      "writtenOn": "2025-02-04T19:00:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "85778685_66a5ecf8",
       "revId": "8ed8cdc6675a34ec01104caf75698cf06a27756d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
