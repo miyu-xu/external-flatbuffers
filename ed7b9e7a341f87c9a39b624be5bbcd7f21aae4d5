@@ -94,6 +94,30 @@
       },
       "revId": "ed7b9e7a341f87c9a39b624be5bbcd7f21aae4d5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7032d39a_3c7fa4a3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1376662
+      },
+      "writtenOn": "2026-01-21T23:05:19Z",
+      "side": 1,
+      "message": "Ping on this - is this CL still active?",
+      "parentUuid": "01f1dcff_2431422d",
+      "range": {
+        "startLine": 10,
+        "startChar": 6,
+        "endLine": 10,
+        "endChar": 10
+      },
+      "revId": "ed7b9e7a341f87c9a39b624be5bbcd7f21aae4d5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
